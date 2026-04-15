@@ -1,14 +1,17 @@
-# Template React Native Web Expo TypeScript
+# Poke TCG Store
 
-A fully scaffolded, cross-platform (iOS / Android / Web) React Native template app built with Expo, TypeScript, and modern tooling.
+A cross-platform (iOS / Android / Web) Pokémon TCG deck management app built with Expo, TypeScript, and modern tooling.
 
 ## Features
 
 - **Expo managed workflow** — no ejected native projects
 - **TypeScript** in strict mode with `@/*` path alias
-- **React Navigation** (native stack) with type-safe routes
-- **Context API** state management (Language, Auth, Ads, Toast)
+- **React Navigation** (drawer + native stack) with type-safe routes
+- **Pokémon TCG Deck screen** — browse, search, and filter your card collection
+- **Material Design 3 tokens** for the TCG UI (`bg-m3-*`, `text-m3-*`)
+- **Context API** state management (Language, Auth, Ads, Toast, Theme)
 - **i18n** — English & Portuguese (device language auto-detection)
+- **Dark / Light mode** — persisted via AsyncStorage
 - **Auth stub** — Google Sign-In on native, guest mode on web
 - **Ad stub** — AdMob placeholders (banner, rewarded, interstitial)
 - **Realtime** — Socket.io client wrapper & hook
@@ -96,13 +99,20 @@ pnpm run ios
 ├── assets/                    # App icons & splash screen
 └── src/
     ├── components/            # Shared UI components
-    │   └── ErrorBoundary.tsx
+    │   ├── DrawerContent.tsx  # Side drawer (theme toggle, language)
+    │   ├── ErrorBoundary.tsx
+    │   └── deck/              # Pokémon TCG deck components
+    │       ├── AddCardSlot.tsx
+    │       ├── BottomTabBar.tsx
+    │       ├── FeatureCard.tsx
+    │       ├── MarketInsightCard.tsx
+    │       └── PokemonCardItem.tsx
     ├── screens/               # Screen components
-    │   ├── HomeScreen.tsx
-    │   └── DetailsScreen.tsx
+    │   └── DeckDetailScreen.tsx
     ├── navigation/            # Navigator definitions
     │   └── AppNavigator.tsx
     ├── providers/             # Context providers
+    │   ├── ThemeProvider.tsx
     │   ├── LanguageProvider.tsx
     │   ├── AuthProvider.tsx
     │   ├── AdProvider.tsx

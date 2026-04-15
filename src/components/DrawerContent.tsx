@@ -3,7 +3,7 @@ import { View, Pressable } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import type { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Home, Moon, Sun, Languages, BookOpen, UtensilsCrossed, Layers } from 'lucide-react-native';
+import { Moon, Sun, Languages, Layers } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 import { Text } from '@/components/ui/text';
 import { Toggle } from '@/components/ui/toggle';
@@ -20,21 +20,6 @@ export const DrawerContent: React.FC<DrawerContentComponentProps> = (props) => {
   const { language, setLanguage } = useLanguage();
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
-
-  const navigateToHome = () => {
-    props.navigation.navigate('Main', { screen: 'Home' });
-    props.navigation.closeDrawer();
-  };
-
-  const navigateToMenu = () => {
-    props.navigation.navigate('Main', { screen: 'Menu' });
-    props.navigation.closeDrawer();
-  };
-
-  const navigateToAbout = () => {
-    props.navigation.navigate('Main', { screen: 'About' });
-    props.navigation.closeDrawer();
-  };
 
   const navigateToDeckDetail = () => {
     props.navigation.navigate('Main', { screen: 'DeckDetail' });
@@ -61,42 +46,18 @@ export const DrawerContent: React.FC<DrawerContentComponentProps> = (props) => {
         {/* Header */}
         <View className="border-b border-border pb-4 mb-2 mt-2">
           <Text className="text-xl font-bold text-foreground">
-            {t('sidemenu.appName')}
+            {t('deck.appName')}
           </Text>
         </View>
 
         {/* Navigation */}
         <View className="gap-1 mt-2">
           <Pressable
-            onPress={navigateToHome}
-            className="flex-row items-center gap-3 rounded-md px-3 py-3 active:bg-accent"
-          >
-            <Home size={20} color={iconColor} />
-            <Text className="text-base text-foreground">{t('sidemenu.home')}</Text>
-          </Pressable>
-
-          <Pressable
-            onPress={navigateToMenu}
-            className="flex-row items-center gap-3 rounded-md px-3 py-3 active:bg-accent"
-          >
-            <UtensilsCrossed size={20} color={iconColor} />
-            <Text className="text-base text-foreground">{t('sidemenu.menu')}</Text>
-          </Pressable>
-
-          <Pressable
-            onPress={navigateToAbout}
-            className="flex-row items-center gap-3 rounded-md px-3 py-3 active:bg-accent"
-          >
-            <BookOpen size={20} color={iconColor} />
-            <Text className="text-base text-foreground">{t('sidemenu.about')}</Text>
-          </Pressable>
-
-          <Pressable
             onPress={navigateToDeckDetail}
             className="flex-row items-center gap-3 rounded-md px-3 py-3 active:bg-accent"
           >
             <Layers size={20} color={iconColor} />
-            <Text className="text-base text-foreground">{t('sidemenu.deckDetail')}</Text>
+            <Text className="text-base text-foreground">{t('sidemenu.decks')}</Text>
           </Pressable>
         </View>
 
