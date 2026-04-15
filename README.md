@@ -137,3 +137,11 @@ pnpm run ios
 ## Detailed Reference
 
 See [BOOTSTRAP.md](./BOOTSTRAP.md) for the full technology decisions, package versions, and configuration patterns.
+
+## Code Review Snapshot
+
+- Latest review report: [docs/CODE-REVIEW-2026-04-15.md](./docs/CODE-REVIEW-2026-04-15.md)
+- Current baseline status:
+  - Lint passes with 1 warning
+  - Tests pass in CI mode
+  - `npm audit` currently reports high/low vulnerabilities requiring dependency upgrade planning
