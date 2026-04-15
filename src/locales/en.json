@@ -67,9 +67,40 @@
     "home": "Home",
     "menu": "The Menu",
     "about": "Our Story",
+    "deckDetail": "Deck Detail",
     "theme": "Theme",
     "darkMode": "Dark Mode",
     "lightMode": "Light Mode",
     "language": "Language"
+  },
+  "deck": {
+    "appName": "The Archivist",
+    "masterSet": "Master Set",
+    "updatedAgo": "Updated {{time}} ago",
+    "deckName": "Shadows of Paldea",
+    "cardsCollected": "Cards Collected",
+    "addMore": "Add More",
+    "searchPlaceholder": "Search within deck...",
+    "viewDetails": "View Details",
+    "addToDeck": "Add to Deck",
+    "addToDeckDesc": "Scan a new card to expand this set",
+    "marketInsight": "Market Insight",
+    "estimatedValue": "Estimated value for the current {{count}} cards",
+    "rarest": "Rarest",
+    "conditionAvg": "Condition Avg",
+    "loadMore": "Load More Cards ({{count}} Remaining)",
+    "filter": {
+      "allTypes": "All Types",
+      "fire": "Fire",
+      "water": "Water",
+      "psychic": "Psychic",
+      "holoRare": "Holo-Rare"
+    }
+  },
+  "tabs": {
+    "home": "Home",
+    "scan": "Scan",
+    "decks": "Decks",
+    "profile": "Profile"
   }
 }

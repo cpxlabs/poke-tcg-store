@@ -67,9 +67,40 @@
     "home": "Início",
     "menu": "Cardápio",
     "about": "Nossa História",
+    "deckDetail": "Detalhes do Deck",
     "theme": "Tema",
     "darkMode": "Modo Escuro",
     "lightMode": "Modo Claro",
     "language": "Idioma"
+  },
+  "deck": {
+    "appName": "The Archivist",
+    "masterSet": "Conjunto Mestre",
+    "updatedAgo": "Atualizado há {{time}}",
+    "deckName": "Sombras de Paldea",
+    "cardsCollected": "Cartas Coletadas",
+    "addMore": "Adicionar Mais",
+    "searchPlaceholder": "Buscar no deck...",
+    "viewDetails": "Ver Detalhes",
+    "addToDeck": "Adicionar ao Deck",
+    "addToDeckDesc": "Escaneie uma nova carta para expandir este conjunto",
+    "marketInsight": "Análise de Mercado",
+    "estimatedValue": "Valor estimado para as {{count}} cartas atuais",
+    "rarest": "Mais Rara",
+    "conditionAvg": "Condição Média",
+    "loadMore": "Carregar Mais Cartas ({{count}} Restantes)",
+    "filter": {
+      "allTypes": "Todos os Tipos",
+      "fire": "Fogo",
+      "water": "Água",
+      "psychic": "Psíquico",
+      "holoRare": "Holo-Raro"
+    }
+  },
+  "tabs": {
+    "home": "Início",
+    "scan": "Escanear",
+    "decks": "Decks",
+    "profile": "Perfil"
   }
 }
