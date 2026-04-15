@@ -29,7 +29,7 @@ module.exports = () => {
       ios: {
         supportsTablet: true,
         bundleIdentifier: 'com.milkshakespeare.app',
-        googleServicesFile: './GoogleService-Info.plist',
+        ...(isWebBuild ? {} : { googleServicesFile: './GoogleService-Info.plist' }),
       },
       android: {
         adaptiveIcon: {
@@ -37,9 +37,9 @@ module.exports = () => {
           backgroundColor: '#fffbe8',
         },
         package: 'com.milkshakespeare.app',
-        googleServicesFile: './google-services.json',
+        ...(isWebBuild ? {} : { googleServicesFile: './google-services.json' }),
       },
-      web: { favicon: './assets/favicon.png' },
+      web: { bundler: 'metro', favicon: './assets/favicon.png' },
       plugins,
     },
   };

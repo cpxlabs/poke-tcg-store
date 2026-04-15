@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm expo export --platform web",
+  "outputDirectory": "dist",
+  "framework": null,
+  "env": {
+    "EXPO_PUBLIC_BUILD_PLATFORM": "web"
+  }
+}
