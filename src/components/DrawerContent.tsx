@@ -3,7 +3,7 @@ import { View, Pressable } from 'react-native';
 import { DrawerContentScrollView } from '@react-navigation/drawer';
 import type { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Home, Moon, Sun, Languages, BookOpen, UtensilsCrossed } from 'lucide-react-native';
+import { Home, Moon, Sun, Languages, BookOpen, UtensilsCrossed, Layers } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 import { Text } from '@/components/ui/text';
 import { Toggle } from '@/components/ui/toggle';
@@ -33,6 +33,11 @@ export const DrawerContent: React.FC<DrawerContentComponentProps> = (props) => {
 
   const navigateToAbout = () => {
     props.navigation.navigate('Main', { screen: 'About' });
+    props.navigation.closeDrawer();
+  };
+
+  const navigateToDeckDetail = () => {
+    props.navigation.navigate('Main', { screen: 'DeckDetail' });
     props.navigation.closeDrawer();
   };
 
@@ -84,6 +89,14 @@ export const DrawerContent: React.FC<DrawerContentComponentProps> = (props) => {
           >
             <BookOpen size={20} color={iconColor} />
             <Text className="text-base text-foreground">{t('sidemenu.about')}</Text>
+          </Pressable>
+
+          <Pressable
+            onPress={navigateToDeckDetail}
+            className="flex-row items-center gap-3 rounded-md px-3 py-3 active:bg-accent"
+          >
+            <Layers size={20} color={iconColor} />
+            <Text className="text-base text-foreground">{t('sidemenu.deckDetail')}</Text>
           </Pressable>
         </View>
 
